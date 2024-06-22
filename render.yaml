@@ -1,0 +1,6 @@
+services:
+  - name: php-app
+    env: docker
+    startCommand: php -S 0.0.0.0:8080 -t /path/to/your/public_html
+    # Reemplaza /path/to/your/public_html con la ruta donde está tu index.php y otros archivos PHP
+    healthCheckPath: /
