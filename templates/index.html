@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones CRUD con Flask y MySQL</title>
+</head>
+<body>
+    <h1>Operaciones CRUD con Flask y MySQL</h1>
+
+    <!-- Formulario para insertar un nuevo registro -->
+    <h2>Insertar nuevo registro:</h2>
+    <form action="/insertar" method="post">
+        Nombre: <input type="text" name="nombre"><br>
+        Colonia: <input type="text" name="colonia"><br>
+        Alcaldia: <input type="text" name="alcaldia"><br>
+        Latitud: <input type="text" name="latitud"><br>
+        Longitud: <input type="text" name="longitud"><br>
+        Puntos de acceso: <input type="number" name="puntos_de_acceso"><br>
+        Programa: <input type="text" name="programa"><br>
+        Costo por punto: <input type="number" name="costo_punto"><br>
+        Retorno de inversión: <input type="number" name="retorno_inv"><br>
+        <input type="submit" value="Insertar">
+    </form>
+
+    <!-- Formulario para actualizar un registro -->
+    <h2>Actualizar registro existente:</h2>
+    <form action="/actualizar" method="post">
+        ID: <input type="text" name="id"><br>
+        Nuevo nombre: <input type="text" name="nuevo_nombre"><br>
+        Nueva colonia: <input type="text" name="nueva_colonia"><br>
+        Nueva alcaldia: <input type="text" name="nueva_alcaldia"><br>
+        Nueva latitud: <input type="text" name="nueva_latitud"><br>
+        Nueva longitud: <input type="text" name="nueva_longitud"><br>
+        Nuevos puntos de acceso: <input type="number" name="nuevos_puntos_de_acceso"><br>
+        Nuevo programa: <input type="text" name="nuevo_programa"><br>
+        Nuevo costo por punto: <input type="number" name="nuevo_costo_punto"><br>
+        Nuevo retorno de inversión: <input type="number" name="nuevo_retorno_inv"><br>
+        <input type="submit" value="Actualizar">
+    </form>
+
+    <!-- Formulario para eliminar un registro -->
+    <h2>Eliminar registro:</h2>
+    <form action="/eliminar" method="post">
+        ID: <input type="text" name="id"><br>
+        <input type="submit" value="Eliminar">
+    </form>
+
+    <!-- Botón para consultar todos los registros -->
+    <h2>Consultar registros:</h2>
+    <form action="/consultar" method="get">
+        <input type="submit" value="Consultar">
+    </form>
+
+</body>
+</html>
