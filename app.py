@@ -20,7 +20,7 @@ def index():
     return render_template('index.html')
 
 # Ruta para insertar datos en la base de datos
-@app.route('/insertar.php', methods=['POST'])
+@app.route('/insertar', methods=['POST'])
 def insertar():
     try:
         nombre = request.form['nombre']
@@ -46,7 +46,7 @@ def insertar():
         return jsonify({'error': str(e)}), 500
 
 # Ruta para actualizar datos en la base de datos
-@app.route('/actualizar.php', methods=['POST'])
+@app.route('/actualizar', methods=['POST'])
 def actualizar():
     try:
         id = request.form['id']
@@ -73,7 +73,7 @@ def actualizar():
         return jsonify({'error': str(e)}), 500
 
 # Ruta para eliminar datos en la base de datos
-@app.route('/eliminar.php', methods=['POST'])
+@app.route('/eliminar', methods=['POST'])
 def eliminar():
     try:
         id = request.form['id']
@@ -91,7 +91,7 @@ def eliminar():
         return jsonify({'error': str(e)}), 500
 
 # Ruta para consultar datos en la base de datos
-@app.route('/consultar.php', methods=['GET'])
+@app.route('/consultar', methods=['GET'])
 def consultar():
     try:
         conn = get_db_connection()
